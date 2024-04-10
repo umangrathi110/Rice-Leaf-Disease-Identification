@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Disease Detection</title>
+    <script src="server.js"></script>
+</head>
+<body>
+    <h1 >Image Disease Detection</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*">
+        <button type="submit" value="Predict">Predict</button>
+    </form>
+    {% if result %}
+        <h2>Predicted class: {{ result.class }}</h2>
+    {% endif %}
+
+</body>
+</html>
