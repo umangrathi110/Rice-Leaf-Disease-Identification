@@ -8,11 +8,11 @@ import tempfile
 
 
 # for windows
-UPLOAD_FOLDER= tempfile.gettempdir()
+# UPLOAD_FOLDER= tempfile.gettempdir()
 
 
 # for linux
-# UPLOAD_FOLDER = '/tmp'
+UPLOAD_FOLDER = '/tmp'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 
 def allowed_file(filename):
@@ -25,7 +25,12 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Load the trained model
-model = tf.keras.models.load_model(r'C:\Users\asus\Desktop\Major Project\Rice-Leaf-Disease-Identification\resnet152_model.h5')
+
+# in windows
+# model = tf.keras.models.load_model(r'C:\Users\asus\Desktop\Major Project\Rice-Leaf-Disease-Identification\resnet152_model.h5')
+
+# in linux
+model = tf.keras.models.load_model("/home/umang.rathi/Documents/Major Project/resnet152_model.h5")
 
 @app.route('/predict', methods=['POST'])
 def predict():
