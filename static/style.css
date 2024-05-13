@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: lightblue url("https://i0.wp.com/southeastagnet.com/wp-content/uploads/2019/09/soil.shutterstock_1361098592.jpg?resize=768%2C512&ssl=1") no-repeat fixed center center;
+    background-size: cover;
+}
+
+.container {
+    width: 80%; /* Adjust as needed */
+    margin: 10% auto; /* Center vertically and horizontally */
+}
+
+h1 {
+    font-size: 36px;
+    color: #add8e6;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    margin-left: 50px;
+    position: relative;
+    text-align: left; /* Align text to the left */
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #a387b5;
+    transform: scaleX(0);
+    transition: transform 1s ease;
+}
+
+h1.loaded::after {
+    transform: scaleX(1);
+}
+
+form {
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Adjust as needed */
+    margin: 0 auto; /* Center horizontally */
+}
+
+input[type="file"] {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    border: none;
+    border-radius: 0.25em;
+    background-color: #f2f2f2;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #333;
+    transition: background-color 0.2s ease-out;
+}
+
+input[type="file"]:focus {
+    outline: none;
+    background-color: #f9f9f9;
+}
+
+input[type="file"]:hover {
+    background-color: #d6d5d5;
+    color: #333;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+    display: none;
+}
+
+input[type="file"]::before {
+    content: "Select an image file";
+    display: block;
+    padding: 0.5em;
+    border-radius: 0.25em;
+    background-color: #333;
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+#imagePreview {
+    display: none;
+    max-width: 100px;
+    max-height: 100px;
+    margin-bottom: 0.5em;
+}
+
+button{
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #3e8e41;
+}
+
+
+
+h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ebe617;
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 70px;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Media Query for Desktop Layout */
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        align-items: flex-start; /* Align items to the start (left) */
+        justify-content: space-between; /* Distribute items along the main axis */
+    }
+
+    h1 {
+        text-align: left; /* Align text to the left */
+        margin-right: 20px; /* Add space between h1 and form */
+    }
+
+    form {
+        width: 26%; /* Adjust width as needed */
+        margin-left: 8%; /* Remove margin */
+    }
+}

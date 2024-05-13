@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rice Leaf Disease Identifier</title>
-    <script src="server.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/server.js"></script>
+    
 </head>
 <body>
     <h1 >Rice Leaf Disease Identifier</h1>
     <form action="/predict" method="post" enctype="multipart/form-data">
         <input type="file" name="file" accept="image/*">
         <button type="submit" value="Predict">Predict</button>
+        <!-- <button id="resetbutton" type="reset" value="Reset">Reset</button> -->
     </form>
     {% if result %}
         <h2>Predicted class: {{ result.class }}</h2>
