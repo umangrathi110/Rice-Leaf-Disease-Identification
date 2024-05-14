@@ -2,7 +2,7 @@ document.getElementById('file').addEventListener('change', function (event) {
     var input = event.target;
     var reader = new FileReader();
 
-    reader.onload = function () {s
+    reader.onload = function () {
         var dataURL = reader.result;
         var imagePreview = document.getElementById('imagePreview');
         imagePreview.src = dataURL;
