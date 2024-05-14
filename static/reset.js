@@ -1,4 +1,4 @@
-document.getElementById('file').addEventListener('change', function (event) {
+document.getElementById('imageInput').addEventListener('change', function (event) {
     var input = event.target;
     var reader = new FileReader();
 
