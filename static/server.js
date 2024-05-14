@@ -22,10 +22,6 @@ function predict() {
 }
 
 document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault(); 
     predict();
-});
-
-// document.getElementById('resetbutton').addEventListener('click', function(){
-//     window.location.href='/';
-// });
+}); 

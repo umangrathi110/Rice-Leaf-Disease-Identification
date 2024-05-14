@@ -6,18 +6,37 @@
     <title>Rice Leaf Disease Identifier</title>
     <link rel="stylesheet" href="/static/style.css">
     <script src="/static/server.js"></script>
+    <script src="/static/reset.js"></script>
     
 </head>
 <body>
-    <h1 >Rice Leaf Disease Identifier</h1>
+
+    <div class="container flex">
+        <h1 id="heading">Rice Leaf Disease Identifier</h1>
+        <form class="flex" action="/predict" method="post" enctype="multipart/form-data">
+            <input id="file" type="file" name="file" accept="image/*">
+            <img src="#" id="imagePreview" alt="Image Preview">
+            <div class="btn">
+                <button id="submit" type="submit" value="Predict">Predict</button>
+                <button type="reset" onclick="resetButton()">Reset</button>
+            </div>
+        </form>
+        {% if result %}
+        <h2 id="result">Predicted class: {{ result.class }}</h2>
+        {% endif %}
+    </div>
+
+
+    <!-- <h1 >Rice Leaf Disease Identifier</h1>
     <form action="/predict" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" accept="image/*">
-        <button type="submit" value="Predict">Predict</button>
-        <!-- <button id="resetbutton" type="reset" value="Reset">Reset</button> -->
+        <input id="file" type="file" name="file" accept="image/*">
+        <button id="submit" type="submit" value="Predict">Predict</button>
+        <button onclick="resetButton()" type="button">Reset</button>
     </form>
+    
     {% if result %}
         <h2>Predicted class: {{ result.class }}</h2>
-    {% endif %}
+    {% endif %} -->
 
 </body>
 </html>
