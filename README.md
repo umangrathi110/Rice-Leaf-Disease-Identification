@@ -2,6 +2,11 @@
 
 ## Overview
 Rice Leaf Disease Identification is a deep learning project aimed at detecting and classifying diseases in rice leaves using computer vision techniques. The project utilizes transfer learning with the ResNet152V2 model, incorporating an attention layer to focus on important parts of the image. The dataset used for training the model contains approximately 2600 images belonging to six different classes.
+
+### Project Video
+[Watch the video here](https://www.loom.com/share/3ac68f165e2f4d1bb7d67fe5c1256e99?sid=97793e34-a80f-4686-b068-bf4ce70e7d8e)
+
+
 ## Dataset
 The dataset used for training the model is sourced from Kaggle and contains images of rice leaves affected by different diseases. You can access the dataset [here](https://www.kaggle.com/datasets/dedeikhsandwisaputra/rice-leafs-disease-dataset).
 
